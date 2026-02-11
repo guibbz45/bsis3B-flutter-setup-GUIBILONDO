@@ -35,25 +35,28 @@ class _QuizPageState extends State<QuizPage> {
 
   final List<Map<String, dynamic>> questions = [
     {
-      "question": "Which mobile app feature would help NCF Cafeteria in Naga City the most?",
-      "options": ["Online food pre-ordering", "Digital queue number system", "Loyalty points tracker", "Customer feedback form"],
+      "question": "What is the most commonly used type of transmission in modern cars?",
+      "options": ["Manual", "Automatic", "CVT", "Dual-clutch"],
       "answerIndex": 1,
     },
     {
-      "question": "Which local Bicolano dish is most likely to be a best-seller at the NCF Cafeteria?",
-      "options": ["Adobo", "Bicol Express", "Sinigang", "Chopsuey"],
+      "question": "Which of these is the fastest 0-60 car?",
+      "options": ["Ferrari F8 Tributo", "Lamborghini Aventador", "Bugatti Chiron", "Tesla Model S Plaid"],
+      "answerIndex": 3,
+    },
+    {
+      "question": "What does ABS stand for in cars?",
+      "options": ["Advanced Braking System", "Anti-lock Braking System", "Automatic Brake Speed", "Auxiliary Brake Sensor"],
       "answerIndex": 1,
     },
     {
-      "question": "What is the main benefit of a digital payment system for NCF students?",
-      "options": ["Free food", "Slower service", "Faster transactions", "More homework"],
-      "answerIndex": 2,
-    },
-    {
-      "question": "At what time is the NCF Cafeteria usually at its peak capacity?",
-      "options": ["7:00 AM", "10:00 AM", "12:00 PM", "4:00 PM"],
+      "question": "Which car manufacturer is known for the iconic Beetle?",
+      "options": ["BMW", "Mercedes-Benz", "Volkswagen", "Audi"],
       "answerIndex": 2,
     }
+
+  
+
   ];
 
   void startQuiz() {
@@ -100,7 +103,7 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("NCF Cafeteria Quiz"),
+        title: const Text("Car Knowledge Quiz"),
         centerTitle: true,
       ),
       body: Padding(
@@ -126,15 +129,15 @@ class _QuizPageState extends State<QuizPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.fastfood, size: 80, color: Colors.blue),
+          const Icon(Icons.directions_car, size: 80, color: Colors.blue),
           const SizedBox(height: 20),
           const Text(
-            "NCF Cafeteria Tech Quiz",
+            "Car Quiz Master",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
-          const Text("Test your knowledge on cafeteria efficiency!"),
+          const Text("Test your knowledge about cars and vehicles"),
           const SizedBox(height: 30),
           ElevatedButton(
             style: ElevatedButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15)),
