@@ -105,10 +105,55 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         title: const Text("Car Knowledge Quiz"),
         centerTitle: true,
+        backgroundColor: const Color.fromARGB(221, 51, 120, 141),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: _buildContent(),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.grey.shade900,
+              const Color.fromARGB(255, 168, 148, 148),
+              const Color.fromARGB(255, 52, 85, 146),
+            ],
+          ),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              top: 20,
+              right: 20,
+              child: Icon(
+                Icons.directions_car,
+                size: 120,
+                color: const Color.fromARGB(255, 203, 223, 217).withOpacity(0.2),
+              ),
+            ),
+            Positioned(
+              bottom: 30,
+              left: 10,
+              child: Icon(
+                Icons.engineering,
+                size: 100,
+                color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.15),
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              right: 30,
+              child: Icon(
+                Icons.speed,
+                size: 90,
+                color: const Color.fromARGB(255, 30, 40, 41).withOpacity(0.15),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: _buildContent(),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -129,7 +174,7 @@ class _QuizPageState extends State<QuizPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.directions_car, size: 80, color: Colors.blue),
+          const Icon(Icons.directions_car, size: 80, color: Color.fromARGB(255, 170, 197, 219)),
           const SizedBox(height: 20),
           const Text(
             "Car Quiz Master",
